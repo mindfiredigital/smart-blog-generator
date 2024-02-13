@@ -1,0 +1,66 @@
+{
+  "name": "smart-blog-generator",
+  "version": "1.0.0",
+  "description": "Smart blog generator using ChatGPT 3.5",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "babel": "babel index.js -d dist",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Soumen Das",
+    "url": "https://github.com/mfsi-soumend"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-external-helpers": "^7.22.5",
+    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-stage-1": "^7.8.3",
+    "@hookform/resolvers": "^3.3.4",
+    "@lopatnov/rollup-plugin-uglify": "^2.1.5",
+    "@radix-ui/react-icons": "^1.3.0",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-select": "^2.0.0",
+    "@radix-ui/react-slot": "^1.0.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "axios": "^1.6.7",
+    "babel-preset-minify": "^0.5.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.50.1",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-import-css": "^3.3.5",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "styled-jsx": "^5.1.2",
+    "tailwind-merge": "^2.2.1",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.22.4"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}
