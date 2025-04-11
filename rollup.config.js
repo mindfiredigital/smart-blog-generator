@@ -4,7 +4,7 @@ import terser from "@rollup/plugin-terser";
 import postcss from "rollup-plugin-postcss";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 import { babel } from "@rollup/plugin-babel";
-import uglify from "@lopatnov/rollup-plugin-uglify";
+import json from "@rollup/plugin-json";
 
 export default [
   {
@@ -21,14 +21,14 @@ export default [
         exports: "named",
       },
     ],
-    external: ["react", "react-dom", "axios", "react-syntax-highlighter"],
+    external: ["react", "react-dom", "axios"],
     plugins: [
       peerDepsExternal(),
       nodeResolve({
         extensions: [".js", ".jsx"],
       }),
+      json(),
       commonjs(),
-      terser(),
       postcss({
         plugins: [require("tailwindcss"), require("autoprefixer")],
         minimize: false,
@@ -39,7 +39,7 @@ export default [
         babelHelpers: "bundled",
         exclude: "node_modules/**",
       }),
-      uglify(),
+      terser(),
     ],
   },
 ];
